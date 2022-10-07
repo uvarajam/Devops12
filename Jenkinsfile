@@ -10,7 +10,7 @@ pipeline {
        }
     stage('pack the file') {
         steps {
-    tar -cvf data.tar.gz file abc
+   sh "tar -cvf  file abc"
 } 
     
   }
