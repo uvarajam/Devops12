@@ -1,5 +1,5 @@
 
-node {
+pipeline {
     Stage ('checkout') {
     checkout scm 
     /* .. snip .. */
