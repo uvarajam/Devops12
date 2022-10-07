@@ -2,14 +2,14 @@
 pipeline {
     agent any
     stages {
-          Stage ('checkout') {
-              Steps {
+          stage ('checkout') {
+              steps {
               checkout scm 
            }
               
        }
     stage('pack the file') {
-        Steps {
+        steps {
     sh "tar -cvf data.tar.gz file abc"
 } 
     
