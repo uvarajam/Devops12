@@ -1,13 +1,21 @@
 
 pipeline {
-    Stage ('checkout') {
-    checkout scm 
-    /* .. snip .. */
+    agent any
+    stages {
+          Stage ('checkout') {
+              Steps {
+              checkout scm 
            }
+              
+       }
     stage('pack the file') {
-    sh "tar -czf data.tar.gz file abc"
+        Steps {
+    sh "tar -cvf data.tar.gz file abc"
 } 
     
   }
+        
+    }
+}
 
          
