@@ -1,6 +1,6 @@
 
 node {
-    Stage ('checkout) {
+    Stage ('checkout') {
     checkout scm 
     /* .. snip .. */
            }
